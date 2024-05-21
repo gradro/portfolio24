@@ -4,15 +4,23 @@ const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      "dark": "#3d3d3d",
+      "primary": "var(--color-primary)",
+      "primary-300": "var(--color-primary-300)",
+      "white": "#fff",
+      "white-100": "var(--color-white-100)",
+      "transparent": "transparent"
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      fontFamily: {
+        "open-sans": "var(--font-open-sans)",
+        "playfair-display": "var(--font-playfair-display)"
+      }
     },
   },
   plugins: [],
