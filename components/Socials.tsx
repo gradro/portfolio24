@@ -6,6 +6,7 @@ const defaultAnimations = {
   hidden: {
       opacity: 0,
       y: 10
+      
   },
   visible: {
       opacity: 0.8,
@@ -30,7 +31,7 @@ const Socials = () => {
             title={social.title} 
             key={social.name} 
             target='_blank'
-            className="opacity-80 [transform-style:preserve-3d] [backface-visibility:hidden] will-change-transform; hover:opacity-100 duration-100 p-2 block"
+            className="will-change-transform hover:opacity-100 hover:duration-100 p-2 block"
           >
             {social.icon}
           </motion.a>
