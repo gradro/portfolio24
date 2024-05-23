@@ -1,4 +1,3 @@
-"use client";
 import Image from 'next/image'
 import { motion } from 'framer-motion';
 
@@ -28,8 +27,7 @@ const Card = ({ children, title, image, headingLevel, headingShowAs, className }
     const Tag = headingLevel || "h2"
 
     return (
-        <motion.div 
-            className={`border border-white-100 bg-primary-300 p-4 rounded-md flex flex-col ${className}`}>
+        <div className={`border border-white-100 bg-primary-300 p-4 rounded-md flex flex-col ${className}`}>
             {image && 
                 <figure className='mt-[-1rem] ml-[-1rem] mr-[-1rem] overflow-hidden'>
                     <Image 
@@ -45,7 +43,7 @@ const Card = ({ children, title, image, headingLevel, headingShowAs, className }
                 <Tag className={headingShowAs}>{title}</Tag>
             }
             {children}
-        </motion.div>
+        </div>
     )
 }
 
