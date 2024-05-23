@@ -1,12 +1,31 @@
+"use client";
 import { socialLinks } from '@/constants'
-import React from 'react'
+import { motion } from "framer-motion"
+
+const defaultAnimations = {
+  hidden: {
+      opacity: 0,
+      y: 10
+  },
+  visible: {
+      opacity: 0.8,
+      y: 0
+  }
+}
 
 const Socials = () => {
   return (
     <div className='hidden md:block fixed left-4 bottom-0'>
-      <div className='relative pb-24 after:absolute after:bg-white after:opacity-80 after:bottom-0 after after:w-0.5 after:h-20 after:left-0 after:right-0 after:mx-auto'>
+      <motion.div 
+        initial="hidden" 
+        animate="visible"
+        transition={{ staggerChildren: 0.1 }}
+        className='relative pb-24'
+      >
+
         {socialLinks.map(social => (
-          <a 
+          <motion.a 
+            variants={defaultAnimations}
             href={social.href} 
             title={social.title} 
             key={social.name} 
@@ -14,9 +33,18 @@ const Socials = () => {
             className="opacity-80 hover:opacity-100 duration-100 p-2 block"
           >
             {social.icon}
-          </a>
+          </motion.a>
         ))}
-      </div>
+
+        {/* Vertical line */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 0.8, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className='absolute bg-white opacity-80 bottom-0 w-0.5 h-20 left-0 right-0 mx-auto'
+        />
+
+      </motion.div>
     </div>
   )
 }
