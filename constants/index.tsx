@@ -2,7 +2,6 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 // Navigation items
 export const navLinks = [
-    { label: "Home", href: "/" },
     { label: "About me", href: "#about-me" },
     { label: "My Projects", href: "#my-projects" },
     { label: "Contact me", href: "#contact" },
@@ -21,7 +20,8 @@ export const projects = [
         name: "My portfolio website",
         description: "This is my portfolio page built with Next.js, TypeScript, and Tailwind.",
         stack: ["JavaScript", "Next.js", "Typescript", "Tailwind"],
-        image: "/assets/projects/portfolio.png"
+        image: "/assets/projects/portfolio.png",
+        
     },
     {
         name: "HubSpot Custom Modules",
@@ -88,3 +88,8 @@ export const experience = [
         location: "Frankfurt, Germany"
     }
 ]
+
+// Framer motion: Fade In on scroll
+const fadeInAnimation = {
+
+}
