@@ -26,8 +26,8 @@ const AnimatedHeading = ({ text, headingLevel, highlightWords, className }: Anim
             <motion.span 
                 aria-hidden 
                 initial="hidden" 
-                transition={{ staggerChildren: 0.15 }}
-                whileInView="visible"
+                transition={{ staggerChildren: 0.1 }}
+                animate="visible"
                 viewport={{ once: true }}
             >
                 {text.split(' ').map((word, index) => (

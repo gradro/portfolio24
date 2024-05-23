@@ -28,6 +28,7 @@ const Header = () => {
             }}
             initial="hidden"
             animate={hidden ? "hidden" : "visible"}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className="fixed left-0 top-6 right-0 z-10 flex justify-center"
         >
             <nav aria-label='Main Navigation' className='inline-block rounded-md p-4 bg-primary-300 border border-white-100'>
