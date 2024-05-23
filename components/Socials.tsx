@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 const defaultAnimations = {
   hidden: {
       opacity: 0,
-      y: 15
+      y: 10
       
   },
   visible: {
@@ -20,7 +20,7 @@ const Socials = () => {
       <motion.div 
         initial="hidden" 
         animate="visible"
-        transition={{ staggerChildren: 0.15, duration: 0.5 }}
+        transition={{ staggerChildren: 0.15, duration: 0.3 }}
         className='relative pb-24'
       >
 
