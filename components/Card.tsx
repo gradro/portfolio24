@@ -10,18 +10,6 @@ type CardProps = {
     image?: string
 } 
 
-const cardAnimations = {
-    initial: {
-        opacity: 0,
-    },
-    animate: (index: number) => ({
-        opacity: 1,
-        transition: {
-          delay: 0.15 * index
-        }
-    })
-}
-
 const Card = ({ children, title, image, headingLevel, headingShowAs, className }: CardProps) => {
 
     const Tag = headingLevel || "h2"

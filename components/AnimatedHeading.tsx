@@ -12,9 +12,13 @@ const defaultAnimations = {
     hidden: {
         opacity: 0,
     },
-    visible: {
+    visible: (index: number) => ({
         opacity: 1,
-    }
+        y: 0,
+        transition: {
+          delay: 0.15 * index,
+        }
+    })
 }
 
 const AnimatedHeading = ({ text, headingLevel, highlightWords, className }: AnimatedHeadingProps) => {
@@ -23,24 +27,26 @@ const AnimatedHeading = ({ text, headingLevel, highlightWords, className }: Anim
     return (
         <Tag className={`block ${className}`}>
             <span className="sr-only">{text}</span>
-            <motion.span 
+            <span 
                 aria-hidden 
-                initial="hidden" 
-                transition={{ staggerChildren: 0.15 }}
-                animate="visible"
-                viewport={{ once: true }}
             >
                 {text.split(' ').map((word, index) => (
                     <motion.span 
                         key={`${word}_${index}`}
                         variants={defaultAnimations}
+                        custom={index}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{
+                        once: true
+                        }}
                         className={`${highlightWords && highlightWords.includes(word) && "text-highlight"}`}
                     >
                         {word + " "} 
                     </motion.span>
                     
                 ))}
-            </motion.span>
+            </span>
         </Tag>
     )
 }
