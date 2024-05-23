@@ -11,14 +11,14 @@ const Home = () => {
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35, duration: 0.6 }}
+          transition={{ delay: 0.35, duration: 0.5 }}
           className='topline text-center'>
             Personal Portfolio
         </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.6 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
         >
           Transforming Ideas into <br/>Interactive <span className="text-highlight">Web Solutions</span>
         </motion.h1>
@@ -34,7 +34,7 @@ const Home = () => {
           className='h3'
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 0.8, y: 0 }}
-          transition={{ delay: 0.25, duration: 0.6 }}
+          transition={{ delay: 0.25, duration: 0.5 }}
         >
           Hello there! I'm Gracjan, a Web Developer.
         </motion.h2>
@@ -42,7 +42,7 @@ const Home = () => {
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
           className="mt-6 flex gap-4 flex-col md:flex-row"
         >
           <Button variant="outline" href="#about-me">Learn more</Button>
