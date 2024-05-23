@@ -17,6 +17,7 @@ const defaultAnimations = {
         y: 0,
         transition: {
           delay: 0.15 * index,
+          duration: 0.4
         }
     })
 }

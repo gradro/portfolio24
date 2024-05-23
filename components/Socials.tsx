@@ -20,7 +20,7 @@ const Socials = () => {
       <motion.div 
         initial="hidden" 
         animate="visible"
-        transition={{ staggerChildren: 0.1 }}
+        transition={{ staggerChildren: 0.1, duration: 0.5 }}
         className='relative pb-24'
       >
 
