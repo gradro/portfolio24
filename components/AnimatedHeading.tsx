@@ -14,7 +14,6 @@ const defaultAnimations = {
     },
     visible: {
         opacity: 1,
-        y: 0
     }
 }
 
@@ -27,7 +26,7 @@ const AnimatedHeading = ({ text, headingLevel, highlightWords, className }: Anim
             <motion.span 
                 aria-hidden 
                 initial="hidden" 
-                transition={{ staggerChildren: 0.1 }}
+                transition={{ staggerChildren: 0.2 }}
                 whileInView="visible"
                 viewport={{ once: true }}
             >

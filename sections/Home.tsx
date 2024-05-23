@@ -11,7 +11,7 @@ const Home = () => {
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 1, duration: 0.3 }}
           className='topline text-center'>
             Personal Portfolio
         </motion.p>
@@ -31,7 +31,7 @@ const Home = () => {
           className='h3'
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 1, duration: 0.4 }}
         >
           Hello there! I'm Gracjan, a Web Developer.
         </motion.h2>
@@ -39,7 +39,7 @@ const Home = () => {
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.65 }}
+          transition={{ delay: 1.1 }}
           className="mt-6 flex gap-4 flex-col md:flex-row"
         >
           <Button variant="outline" href="#about-me">Learn more</Button>

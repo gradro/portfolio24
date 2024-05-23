@@ -1,4 +1,3 @@
-"use client"
 import GradientMouseFollow from "@/components/GradientMouseFollow";
 import Socials from "@/components/Socials";
 import About from "@/sections/About";
