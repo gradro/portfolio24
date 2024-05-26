@@ -20,7 +20,7 @@ const experienceAnimation = {
 
 const Experience = () => {
   return (
-    <section className='container'>
+    <section className='container' id="experience">
         <AnimatedHeading
             topline="Experience"
             text="My Professional Path"
