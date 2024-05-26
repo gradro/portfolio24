@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-size: 18px;
+  @apply text-[16px] md:text-[18px];
   --color-primary: rgb(13, 117, 221);
   --color-primary-300: rgba(11, 50, 80, 1);
   --color-white-100: rgba(255, 255, 255, 0.150);
@@ -48,22 +48,22 @@ h1,h2,h3,h4,h5,h6,
 }
 
 h1, .h1 {
-  font-size: 2.986rem;
+  @apply text-[2.027rem] md:text-[2.986rem]
 }
 h2, .h2 {
-  font-size: 2.488rem;
+  @apply text-[1.802rem] md:text-[2.488rem]
 }
 h3, .h3 {
-  font-size: 2.074rem;
+  @apply text-[1.602rem] md:text-[2.074rem]
 }
 h4, .h4 {
-  font-size: 1.728rem;
+  @apply text-[1.424rem] md:text-[1.728rem]
 }
 h5, .h5 {
-  font-size: 1.44rem;
+  @apply text-[1.266rem] md:text-[1.44rem]
 }
 h6, .h6 {
-  font-size: 1.2rem;
+  @apply text-[1.125rem] md:text-[1.2rem]
 }
 .text-sm {
   font-size: 0.833rem;
