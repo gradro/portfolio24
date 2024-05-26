@@ -31,7 +31,7 @@ const Socials = () => {
             title={social.title} 
             key={social.name} 
             target='_blank'
-            className="will-change-transform hover:opacity-100 hover:duration-100 p-2 block"
+            className="will-change-transform hover:!opacity-100 hover:duration-100 p-2 block"
           >
             {social.icon}
           </motion.a>
