@@ -5,7 +5,7 @@ import {motion} from 'framer-motion'
 
 const Home = () => {
   return (
-    <div className='relative overflow-hidden pt-40 pb-32 min-h-screen md:min-h-full flex items-center'>
+    <div className='relative overflow-hidden pt-48 md:pt-40 pb-32 min-h-screen md:min-h-full'>
       <div className="dots-background absolute z-[-1] w-full h-full top-1 left-1 right-1 bottom-1"/>
       <section className="container pt-14 flex items-center flex-col justify-center text-center lg:max-w-4xl mx-auto">
         <motion.p
