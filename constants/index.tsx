@@ -1,9 +1,14 @@
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdSchool } from "react-icons/md";
+import { IoCodeSlashOutline } from "react-icons/io5";
+import { FaHubspot } from "react-icons/fa6";
+
 
 // Navigation items
 export const navLinks = [
     { label: "About me", href: "#about-me" },
     { label: "My Projects", href: "#my-projects" },
+    { label: "Experience", href: "#experience" },
     { label: "Contact me", href: "#contact" },
 ]
 
@@ -21,13 +26,16 @@ export const projects = [
         description: "This is my portfolio page built with Next.js, TypeScript, and Tailwind.",
         stack: ["JavaScript", "Next.js", "Typescript", "Tailwind"],
         image: "/assets/projects/portfolio.png",
+        githubLink: "https://github.com/gradro/portfolio24",
+        previewLink: ""
         
     },
     {
         name: "HubSpot Custom Modules",
         description: "Collection of free HubSpot Modules created by me.",
         stack: ["HTML", "CSS", "JavaScript", "HubSpot"],
-        image: "/assets/projects/hs-modules.jpg"
+        image: "/assets/projects/hs-modules.jpg",
+        githubLink: "https://github.com/gradro/hubspot"
     }
 ]
 
@@ -70,26 +78,41 @@ export const stack = [
 // Education & Experience
 export const experience = [
     { 
-        title: "Vocational education as a Web Developer",
-        period: "2019 - 2022",
-        company: "IXTENSA GmbH & Co.KG",
-        location: "Lautertal, Germany"
+        title: "Frontend Developer - HubSpot CMS",
+        period: "2023 - present",
+        company: "Thought Leader Systems GmbH",
+        location: "Frankfurt, Germany",
+        icon: <FaHubspot/>
     },
     { 
         title: "Junior Frontend Developer",
         period: "2022 - 2023",
         company: "IXTENSA GmbH & Co.KG",
-        location: "Lautertal, Germany"
+        location: "Lautertal, Germany",
+        icon: <IoCodeSlashOutline/>
     },
     { 
-        title: "Frontend Developer",
-        period: "2023 - present",
-        company: "Thought Leader Systems GmbH",
-        location: "Frankfurt, Germany"
-    }
+        title: "Vocational education as a Web Developer",
+        period: "2019 - 2022",
+        company: "IXTENSA GmbH & Co.KG",
+        location: "Lautertal, Germany",
+        icon: <MdSchool/>
+    },
 ]
 
 // Framer motion: Fade In on scroll
-const fadeInAnimation = {
-
+export const fadeUpAnimation = {
+    variants: {
+        hidden: {
+            opacity: 0,
+            y: 10
+        },
+        visible: {
+            opacity: 1,
+            y: 0
+        }
+    },
+    initial: "hidden",
+    whileInView: "visible",
+    viewport: { once: true }
 }
