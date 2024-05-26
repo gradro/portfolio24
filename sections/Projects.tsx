@@ -12,14 +12,17 @@ const Projects = () => {
           className='text-center' 
           highlightWords={["My", "Work"]}
         />
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-          {projects && projects.map(item => (
+        <div className='flex flex-col gap-4'>
+          {projects && projects.map((item, index) => (
             <ProjectCard 
               key={item.name} 
               image={item.image} 
               title={item.name}
               stack={item.stack}
               description={item.description}
+              githubLink={item.githubLink}
+              previewLink={item.previewLink}
+              reverse={index % 2 ? true : false}
             />
           ))}
         </div>
