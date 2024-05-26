@@ -5,9 +5,9 @@ import {motion} from 'framer-motion'
 
 const Home = () => {
   return (
-    <div className='relative overflow-hidden pt-40 pb-32'>
+    <div className='relative overflow-hidden pt-40 pb-32 min-h-screen md:min-h-full flex items-center'>
       <div className="dots-background absolute z-[-1] w-full h-full top-1 left-1 right-1 bottom-1"/>
-      <section className="pt-14 flex items-center flex-col justify-center text-center lg:max-w-3xl mx-auto">
+      <section className="container pt-14 flex items-center flex-col justify-center text-center lg:max-w-4xl mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,8 @@ const Home = () => {
           transition={{ delay: 0.3, duration: 0.8, ease:"easeInOut" }}
           className="mt-6 flex gap-4 flex-col md:flex-row"
         >
-          <Button variant="outline" href="#about-me">Learn more</Button>
+          <Button variant="primary" href="#about-me">About me</Button>
+          <Button variant="outline" href="/assets/resume.pdf" download>Resume</Button>
         </motion.div>
       </section>
     </div>
