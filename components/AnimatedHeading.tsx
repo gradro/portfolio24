@@ -5,7 +5,8 @@ type AnimatedHeadingProps = {
     text: string
     headingLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span'
     className?: string,
-    highlightWords?: string[]
+    highlightWords?: string[],
+    topline?: string
 }
 
 const defaultAnimations = {
@@ -22,10 +23,33 @@ const defaultAnimations = {
     })
 }
 
-const AnimatedHeading = ({ text, headingLevel, highlightWords, className }: AnimatedHeadingProps) => {
+const toplineAnimation = {
+    hidden: {
+        opacity: 0,
+        y: 10
+    },
+    visible: {
+        opacity: 0.8,
+        y: 0
+    }
+}
+
+const AnimatedHeading = ({ text, headingLevel, highlightWords, topline, className }: AnimatedHeadingProps) => {
 
     const Tag = headingLevel || "h2"
     return (
+        <>
+        {topline && 
+            <motion.p
+                variants={toplineAnimation}
+                whileInView="visible" 
+                initial="hidden"
+                viewport={{ once: true }}
+                className="topline text-center"
+            >
+                {topline}
+            </motion.p>
+        }
         <Tag className={`block ${className}`}>
             <span className="sr-only">{text}</span>
             <span 
@@ -49,6 +73,7 @@ const AnimatedHeading = ({ text, headingLevel, highlightWords, className }: Anim
                 ))}
             </span>
         </Tag>
+        </>
     )
 }
 
