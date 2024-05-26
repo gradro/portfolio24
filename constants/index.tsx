@@ -2,14 +2,17 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdSchool } from "react-icons/md";
 import { IoCodeSlashOutline } from "react-icons/io5";
 import { FaHubspot } from "react-icons/fa6";
+import { IoMdPerson } from "react-icons/io";
+import { GrProjects } from "react-icons/gr";
+import { IoIosBriefcase } from "react-icons/io";
 
 
 // Navigation items
 export const navLinks = [
-    { label: "About me", href: "#about-me" },
-    { label: "My Projects", href: "#my-projects" },
-    { label: "Experience", href: "#experience" },
-    { label: "Contact me", href: "#contact" },
+    { label: "About me", href: "#about-me", icon: <IoMdPerson/>  },
+    { label: "My Projects", href: "#my-projects", icon: <GrProjects /> },
+    { label: "Experience", href: "#experience", icon: <IoIosBriefcase/> },
+    { label: "Contact me", href: "#contact", icon: <FaEnvelope /> },
 ]
 
 // Socials

@@ -1,4 +1,5 @@
 import GradientMouseFollow from "@/components/GradientMouseFollow";
+import MobileNavBar from "@/components/MobileNavBar";
 import Socials from "@/components/Socials";
 import About from "@/sections/About";
 import Contact from "@/sections/Contact";
@@ -23,7 +24,7 @@ export default function Page() {
 
       {/* Social buttons */}
       <Socials/>
-
+      <MobileNavBar/>
     </>
   );
 }

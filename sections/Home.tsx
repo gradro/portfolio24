@@ -20,7 +20,7 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.8, ease:"easeInOut" }}
         >
-          Transforming Ideas into <br/>Interactive <span className="text-highlight">Web Solutions</span>
+          Transforming Ideas into <br/>Interactive <span className="text-highlight block md:inline-block">Web Solutions</span>
         </motion.h1>
      
         
@@ -43,7 +43,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8, ease:"easeInOut" }}
-          className="mt-6 flex gap-4 flex-col md:flex-row"
+          className="mt-6 flex gap-4"
         >
           <Button variant="primary" href="#about-me">About me</Button>
           <Button variant="outline" href="/assets/resume.pdf" download>Resume</Button>

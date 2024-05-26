@@ -17,6 +17,7 @@
 body {
   color: var(--color);
   position: relative;
+  @apply pb-16 md:pb-0
 }
 body:before {
   background-image: radial-gradient(circle farthest-side at var(--posX, 100px) var(--posY, 100px), var(--color-primary) 0, transparent 80%);
