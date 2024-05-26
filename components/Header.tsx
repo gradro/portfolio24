@@ -29,11 +29,11 @@ const Header = () => {
             initial="hidden"
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed left-0 top-6 right-0 z-10 flex justify-center"
+            className="fixed left-1 top-6 right-1 z-20 flex justify-center"
         >
             <nav aria-label='Main Navigation' className='inline-block rounded-md p-4 bg-primary-300 border border-white-100'>
                 {navLinks && 
-                    <ul role="menu" className='inline-flex gap-4'>
+                    <ul role="menu" className='inline-flex gap-4 flex-wrap justify-center'>
                         {navLinks.map((navItem, index) => (
                             <li role="presentation" key={index}>
                                 <Link className='p-2 hover:text-primary focus:text-primary font-extralight relative' role="menuitem" href={navItem.href}>
