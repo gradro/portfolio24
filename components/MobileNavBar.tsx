@@ -4,7 +4,7 @@ import React from 'react'
 
 const MobileNavBar = () => {
   return (
-    <nav className='md:hidden fixed bottom-0 left-0 right-0 w-full h-16 bg-primary-300 border border-white-100'>
+    <nav className='md:hidden z-20 fixed bottom-0 left-0 right-0 w-full h-16 bg-primary-300 border border-white-100'>
         {navLinks && 
             <ul role="menu" className='gap-4 px-4 flex-wrap flex justify-between h-full items-center'>
                 {navLinks.map((navItem, index) => (
