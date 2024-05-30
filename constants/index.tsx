@@ -19,7 +19,7 @@ export const navLinks = [
 export const socialLinks = [
     { name: "linkedin", icon: <FaLinkedin size="24"/>, href: "https://www.linkedin.com/in/gracjan-drozdek", title: "Visit my LinkedIn profile" },
     { name: "github", icon: <FaGithub size="24"/>, href: "https://github.com/gradro", title: "Check out my GitHub profile" },
-    { name: "mail", icon: <FaEnvelope size="24"/> ,href: "mailto:drozdek.gracjan@gmail.com", title: "Send me an email" }
+    { name: "mail", icon: <FaEnvelope size="24"/>, href: "mailto:contact@gdrozdek.com", title: "Send me an email" }
 ]
 
 // Projects
