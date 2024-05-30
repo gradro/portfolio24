@@ -1,5 +1,7 @@
+
 type ButtonProps = {
-    as?: keyof JSX.IntrinsicElements;
+    as?: keyof JSX.IntrinsicElements
+    icon?: JSX.Element
     children: React.ReactNode
     href: string
     variant: "primary" | "outline",
@@ -7,7 +9,7 @@ type ButtonProps = {
     onClick?: () => void;
 }
 
-const Button = ({ as, children, href, variant="primary", onClick, download }: ButtonProps) => {
+const Button = ({ as, children, href, variant="primary", onClick, download, icon }: ButtonProps) => {
 
     const Tag = as || "a";
     const variants = {
@@ -16,8 +18,9 @@ const Button = ({ as, children, href, variant="primary", onClick, download }: Bu
     }
 
     return (
-        <Tag onClick={onClick} href={href || "#"} download={download} className={`rounded-sm px-8 py-3 font-medium cursor-pointer ${variants[variant]}`}>
+        <Tag onClick={onClick} href={href || "#"} download={download} className={`inline-flex items-center [&>svg]:ml-2 rounded-sm px-8 py-3 font-medium cursor-pointer ${variants[variant]}`}>
             {children}
+            {icon}
         </Tag>
     )
 }
