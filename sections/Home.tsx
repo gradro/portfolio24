@@ -1,11 +1,11 @@
 "use client"
-import AnimatedHeading from '@/components/AnimatedHeading'
+import { FiDownload } from "react-icons/fi";
 import Button from '@/components/Button'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const Home = () => {
   return (
-    <div className='relative overflow-hidden pt-32 md:pt-40 pb-32 min-h-screen md:min-h-full'>
+    <div className='relative overflow-hidden pt-10 md:pt-40 pb-32 flex flex-col justify-center md:justify-start min-h-screen md:min-h-full'>
       <div className="dots-background absolute z-[-1] w-full h-full top-1 left-1 right-1 bottom-1"/>
       <section className="container pt-14 flex items-center flex-col justify-center text-center lg:max-w-4xl mx-auto">
         <motion.p
@@ -46,9 +46,9 @@ const Home = () => {
           className="mt-6 flex gap-4"
         >
           <Button variant="primary" href="#about-me">About me</Button>
-          <Button variant="outline" href="/assets/resume.pdf" download>Resume</Button>
+          <Button variant="outline" icon={<FiDownload/>} href="/assets/resume.pdf" download>Resume</Button>
         </motion.div>
-      </section>
+      </section> 
     </div>
   )
 }
