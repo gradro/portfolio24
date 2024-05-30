@@ -14,6 +14,7 @@ const config: Config = {
       "primary-300": "var(--color-primary-300)",
       "white": "#fff",
       "white-100": "var(--color-white-100)",
+      "gradient": "var(--color-gradient)",
       "transparent": "transparent"
     },
     extend: {

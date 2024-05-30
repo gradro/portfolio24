@@ -7,6 +7,7 @@
   --color-primary: rgb(13, 117, 221);
   --color-primary-300: rgba(11, 50, 80, 1);
   --color-white-100: rgba(255, 255, 255, 0.150);
+  --color-gradient: radial-gradient(circle farthest-side at var(--posX, 100px) var(--posY, 100px), var(--color-primary) 0, transparent 80%);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -20,7 +21,7 @@ body {
   @apply pb-16 md:pb-0
 }
 body:before {
-  background-image: radial-gradient(circle farthest-side at var(--posX, 100px) var(--posY, 100px), var(--color-primary) 0, transparent 80%);
+  background-image: var(--color-gradient);
   content: "";
   position: absolute;
   width: 100%;
@@ -35,7 +36,7 @@ body:before {
   opacity: 0.3;
 }
 section {
-  padding: 80px 0;
+  @apply py-12 md:py-16 lg:py-20
 }
 /* Headlines */
 h1,h2,h3,h4,h5,h6,
