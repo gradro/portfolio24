@@ -16,7 +16,7 @@ const Contact = () => {
       <div className="text-center">
         <Button 
           variant="outline"
-          href="mailto:drozdek.gracjan@gmail.com"
+          href="mailto:contact@gdrozdek.com"
         >
           Contact me
         </Button>
