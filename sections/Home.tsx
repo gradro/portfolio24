@@ -2,7 +2,7 @@
 import { FiDownload } from "react-icons/fi";
 import Button from '@/components/Button'
 import { motion } from 'framer-motion'
-import Image from "next/image";
+
 
 const Home = () => {
   return (
