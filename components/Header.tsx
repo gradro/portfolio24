@@ -22,6 +22,18 @@ const Header = () => {
 
 
     return (
+        <>
+        <motion.div 
+            className="absolute left-4 top-6"
+            variants={{
+                visible: { opacity: 1 },
+                hidden: { opacity: 0}
+            }}
+            initial="hidden"
+            animate="visible"
+        >
+            <Image src="/assets/logo.svg" width={64} height={64} alt="gdrozdek.com" className="opacity-80 mx-auto"/>
+        </motion.div>
         <motion.div 
             variants={{
                 visible: { transform: "translateY(0px)" },
@@ -49,6 +61,8 @@ const Header = () => {
                 }
             </nav>
         </motion.div>
+        </>
+
   )
 }
 
