@@ -16,6 +16,9 @@ body {
   position: relative;
   @apply pb-16 md:pb-0
 }
+p {
+  @apply font-light
+}
 body:before {
   background-image: var(--color-gradient);
   content: "";
