@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Image from "next/image";
 
 const opensans = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -19,6 +20,9 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${opensans.className}`}>
         <header className="site-header">
+          <div className="absolute left-4 top-6">
+            <Image src="/assets/logo.svg" width={64} height={64} alt="gdrozdek.com" className="opacity-80 mx-auto"/>
+          </div>
           <Header/>
         </header>
         <main id="main-content">

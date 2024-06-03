@@ -4,6 +4,7 @@ import { navLinks } from '@/constants'
 import Link from 'next/link'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useState } from 'react';
+import Image from 'next/image';
 
 const Header = () => {
 
@@ -31,6 +32,7 @@ const Header = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="hidden md:flex fixed left-1 top-6 right-1 z-20 justify-center"
         >
+
             <nav aria-label='Main Navigation' className='inline-block rounded-md p-4 bg-primary-300 border border-white-100'>
                 {navLinks && 
                     <ul role="menu" className='gap-4 flex-wrap justify-center inline-flex'>
