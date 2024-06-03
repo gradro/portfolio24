@@ -4,16 +4,12 @@
 
 :root {
   @apply text-[16px] md:text-[18px];
+  background-color: #021222;
+  --color: #e7f2fe;
   --color-primary: rgb(13, 117, 221);
   --color-primary-300: rgba(11, 50, 80, 1);
   --color-white-100: rgba(255, 255, 255, 0.150);
   --color-gradient: radial-gradient(circle farthest-side at var(--posX, 100px) var(--posY, 100px), var(--color-primary) 0, transparent 80%);
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    background-color: #021222;
-    --color: #e7f2fe;
-  }
 }
 body {
   color: var(--color);
