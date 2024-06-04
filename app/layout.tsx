@@ -9,7 +9,7 @@ export const metadata = {
   title: "Personal porfolio - Gracjan Drozdek",
   description: "Explore a diverse portfolio of web development projects built with Next.js, TypeScript, Tailwind CSS, and HubSpot CMS. Discover innovative solutions and modern design from a skilled web developer and HubSpot CMS expert.",
   alternates: {
-    canonical: './',
+    canonical: 'https://www.gdrozdek.com',
   }
 };
 
