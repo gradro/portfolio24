@@ -6,7 +6,8 @@ type AnimatedHeadingProps = {
     headingLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span'
     className?: string,
     highlightWords?: string[],
-    topline?: string
+    topline?: string,
+    id?: string
 }
 
 const defaultAnimations = {
@@ -34,46 +35,46 @@ const toplineAnimation = {
     }
 }
 
-const AnimatedHeading = ({ text, headingLevel, highlightWords, topline, className }: AnimatedHeadingProps) => {
+const AnimatedHeading = ({ text, headingLevel, highlightWords, topline, className, id }: AnimatedHeadingProps) => {
 
     const Tag = headingLevel || "h2"
     return (
-        <>
-        {topline && 
-            <motion.p
-                variants={toplineAnimation}
-                whileInView="visible" 
-                initial="hidden"
-                viewport={{ once: true }}
-                className="topline text-center"
-            >
-                {topline}
-            </motion.p>
-        }
-        <Tag className={`block ${className}`}>
-            <span className="sr-only">{text}</span>
-            <span 
-                aria-hidden 
-            >
-                {text.split(' ').map((word, index) => (
-                    <motion.span 
-                        key={`${word}_${index}`}
-                        variants={defaultAnimations}
-                        custom={index}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{
-                        once: true
-                        }}
-                        className={`${highlightWords && highlightWords.includes(word) && "text-highlight"}`}
-                    >
-                        {word + " "} 
-                    </motion.span>
-                    
-                ))}
-            </span>
-        </Tag>
-        </>
+        <div className="relative pt-4" id={id}>
+            {topline && 
+                <motion.p
+                    variants={toplineAnimation}
+                    whileInView="visible" 
+                    initial="hidden"
+                    viewport={{ once: true }}
+                    className="topline text-center"
+                >
+                    {topline}
+                </motion.p>
+            }
+            <Tag className={`block ${className}`}>
+                <span className="sr-only">{text}</span>
+                <span 
+                    aria-hidden 
+                >
+                    {text.split(' ').map((word, index) => (
+                        <motion.span 
+                            key={`${word}_${index}`}
+                            variants={defaultAnimations}
+                            custom={index}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{
+                            once: true
+                            }}
+                            className={`${highlightWords && highlightWords.includes(word) && "text-highlight"}`}
+                        >
+                            {word + " "} 
+                        </motion.span>
+                        
+                    ))}
+                </span>
+            </Tag>
+        </div>
     )
 }
 

@@ -20,12 +20,13 @@ const experienceAnimation = {
 
 const Experience = () => {
   return (
-    <section className='container' id="experience">
+    <section className='container'>
         <AnimatedHeading
             topline="Experience"
             text="My Professional Path"
             highlightWords={["Path"]}
-            className='text-center'
+            className='text-center mb-10'
+            id="experience"
         />
         {/* Work experience */}
         <Timeline items={experience}/>

@@ -29,7 +29,15 @@ const iconsAnimation = {
 
 const Timeline = ({ items }: TimelineProps) => {
   return (
-    <div className="relative pl-6 lg:pl-0 after:absolute after:w-1 after:left-6 lg:after:left-1/2 after:-translate-x-1/2 after:top-0 after:bottom-0 after:h-full after:bg-white-100 after:rounded-md">
+    <motion.div 
+      className="relative pl-6 lg:pl-0 after:absolute after:w-1 after:left-6 lg:after:left-1/2 after:-translate-x-1/2 after:top-0 after:bottom-0 after:h-full after:bg-white-100 after:rounded-md"
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 }
+      }}
+      whileInView="animate"
+      viewport={{ once: true }}
+    >
         {items && items.map((item, index) => (
             <div className={`relative w-full lg:w-1/2 ${index % 2 ? "lg:ml-auto lg:pl-20" : "lg:pr-20"} ${index === 0 && "pt-6 lg:pt-10"} ${index+1 === items.length && "pb-6 lg:pb-10"}`} >
                 <motion.div
@@ -40,7 +48,7 @@ const Timeline = ({ items }: TimelineProps) => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{
-                        once: false
+                        once: true
                     }}
                     custom={index}
                     key={item + "_" + index}
@@ -62,7 +70,7 @@ const Timeline = ({ items }: TimelineProps) => {
                 </motion.div>
             </div>
         ))}
-    </div>
+    </motion.div>
   )
 }
 

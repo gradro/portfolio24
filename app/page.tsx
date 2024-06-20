@@ -22,8 +22,6 @@ export default function Page() {
       <Contact/>
       <Footer />
 
-      {/* Social buttons */}
-      <Socials/>
       <MobileNavBar/>
     </>
   );

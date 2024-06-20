@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { FiDownload } from "react-icons/fi";
 import Button from '@/components/Button'
 import { motion } from 'framer-motion'
@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const Home = () => {
   return (
-    <div className='relative overflow-hidden pt-10 md:pt-40 pb-32 flex flex-col justify-center md:justify-start min-h-screen md:min-h-full'>
+    <div className='relative overflow-hidden pt-10 md:pt-40 pb-20 md:pb-38 flex flex-col justify-center md:justify-start min-h-screen md:min-h-full'>
       <div className="dots-background absolute z-[-1] w-full h-full top-1 left-1 right-1 bottom-1"/>
       <section className="container pt-14 flex items-center flex-col justify-center text-center lg:max-w-4xl mx-auto">
         <motion.p
@@ -23,14 +23,13 @@ const Home = () => {
         >
           Transforming Ideas into <br/>Interactive <span className="text-highlight block md:inline-block">Web Solutions</span>
         </motion.h1>
-     
         
         {/* <AnimatedHeading
           text="Transforming Ideas into Interactive Web Solutions"
           headingLevel="h1"
           highlightWords={["Web", "Solutions"]}
         />
-     */}
+        */}
         <motion.h2 
           className='h3'
           initial={{ opacity: 0, y: 8 }}

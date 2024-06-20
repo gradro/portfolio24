@@ -1,15 +1,16 @@
 import AnimatedHeading from '@/components/AnimatedHeading'
 import ProjectCard from '@/components/ProjectCard'
-import { projects, stack } from '@/constants'
+import { projects } from '@/constants'
 import React from 'react'
 
 const Projects = () => {
   return (
-    <section className="container pt-24" id="my-projects">
-        <p className='topline text-center'>My Projects</p>
+    <section className="container pt-24">
         <AnimatedHeading 
           text="Showcase of My Work" 
+          topline='My Projects'
           className='text-center' 
+          id="my-projects"
           highlightWords={["My", "Work"]}
         />
         <div className='flex flex-col gap-4'>

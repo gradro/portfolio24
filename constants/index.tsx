@@ -10,8 +10,8 @@ import { IoIosBriefcase } from "react-icons/io";
 // Navigation items
 export const navLinks = [
     { label: "About me", href: "#about-me", icon: <IoMdPerson/>  },
-    { label: "My Projects", href: "#my-projects", icon: <GrProjects /> },
     { label: "Experience", href: "#experience", icon: <IoIosBriefcase/> },
+    { label: "My Projects", href: "#my-projects", icon: <GrProjects /> },
     { label: "Contact me", href: "#contact", icon: <FaEnvelope /> },
 ]
 
