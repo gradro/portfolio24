@@ -15,7 +15,7 @@ const Card = ({ children, title, image, headingLevel, headingShowAs, className }
     const Tag = headingLevel || "h2"
 
     return (
-        <motion.div 
+        <div 
             className={`border border-white-100 bg-primary-300 p-4 rounded-md flex flex-col ${className}`}
             
         >
@@ -34,7 +34,7 @@ const Card = ({ children, title, image, headingLevel, headingShowAs, className }
                 <Tag className={headingShowAs}>{title}</Tag>
             }
             {children}
-        </motion.div>
+        </div>
     )
 }
 
