@@ -81,8 +81,15 @@ export const stack = [
 // Education & Experience
 export const experience = [
     { 
+        title: "Frontend Developer",
+        period: "2024 - present",
+        company: "BlendB2B HubSpot Website Agency",
+        location: "Reading, UK",
+        icon: <IoCodeSlashOutline/>
+    },
+    { 
         title: "Frontend Developer - HubSpot CMS",
-        period: "2023 - present",
+        period: "2023 - 2024",
         company: "Thought Leader Systems GmbH",
         location: "Frankfurt, Germany",
         icon: <FaHubspot/>
